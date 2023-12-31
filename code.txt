@@ -1,0 +1,35 @@
+def(string s1, string s2)
+
+# assume s1 = 'abcad', s2 = 'dkbca'
+int max = 0
+str tmp1,tmp2
+int arr[len(s1) + 1][len(s2) + 1]
+
+for c in range(0,len(s1))
+	arr[0][c] = 0
+
+for r in range(0,len(S2))
+	arr[r][0] = 0
+
+for r in range(1,len(s2))
+	
+	for c in range(1,len(s1))
+		
+		if s1[c] == s2[r]
+			arr[r][c] = arr[r-1][c-1] + 1
+			
+			if arr[r-1][c-1] == 0
+				tmp1 = ''
+			tmp1 = tmp1 + s1[c]
+			
+		else
+			arr[r][c] = 0
+
+		if max < arr[r][c]
+			max = arr[r][c]
+			tmp2 = tmp1
+
+	print("longest common substring is: ", tmp2)
+	print("with length of: ", max)
+
+ 
